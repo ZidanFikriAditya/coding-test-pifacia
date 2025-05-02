@@ -8,11 +8,6 @@ import { Head } from '@inertiajs/vue3';
 import axios from 'axios';
 import { onBeforeMount, onMounted, ref, watch } from 'vue';
 
-interface Props {
-}
-
-const props = defineProps<Props>();
-
 const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Dashboard',

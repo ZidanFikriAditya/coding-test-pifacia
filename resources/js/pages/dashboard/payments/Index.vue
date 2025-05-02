@@ -16,10 +16,7 @@ import { Check, Download, Upload, X } from 'lucide-vue-next';
 import { h, onBeforeMount, onMounted, ref, watch } from 'vue';
 import { toast } from 'vue-sonner';
 
-interface Props {}
-
 const basePath = '/dashboard/payments';
-const props = defineProps<Props>();
 const page = usePage<SharedData>();
 const user = page.props.auth.user as User;
 

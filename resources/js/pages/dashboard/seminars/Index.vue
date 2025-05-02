@@ -17,10 +17,6 @@ import { Download, Upload } from 'lucide-vue-next';
 import { h, onBeforeMount, onMounted, ref, watch } from 'vue';
 import { toast } from 'vue-sonner';
 
-interface Props {}
-
-const props = defineProps<Props>();
-
 const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Dashboard',
