@@ -30,7 +30,7 @@ class Payment extends Model implements Auditable
     {
         return [
             'participant_id' => 'required|uuid|exists:participants,id',
-            'file_path' => 'nullable|mimes:pdf|between:100,500',
+            'file_path' => 'nullable|file|mimes:pdf|between:100,500',
             'uploaded_at' => 'nullable|date',
             'metadata' => 'nullable|array',
             'metadata.*' => 'string|max:255',

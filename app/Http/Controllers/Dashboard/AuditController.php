@@ -48,12 +48,11 @@ class AuditController extends Controller
                 return $query->where('auditable_id', $id);
             })
             ->when(request('order_by') != 'user', function ($query) {
-                return $query->orderBy(request('order_by'), request('order') ?? 'asc');
+                return $query->orderBy(request('order_by') ?? 'created_at', request('order') ?? 'asc');
             })
             ->when(request('order_by') == 'user', function ($query) {
                 return $query->orderBy('users.id', request('order') ?? 'asc');
             })
-            ->orderBy('created_at', 'desc')
             ->select('audits.*')
             ->paginate(request('per_page') ?? 7);
 

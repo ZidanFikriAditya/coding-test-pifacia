@@ -37,7 +37,7 @@ class ParticipantController extends Controller
                     });
                 },
                 'ordering' => function ($query) {
-                    return $query->orderBy('seminars.title', 'asc');
+                    return $query->orderBy('seminars.title', request('order', 'asc'));
                 }
             ],
             [
